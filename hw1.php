@@ -51,8 +51,7 @@ $cars = ["bmw" => $bmv, "toyota" => $toyota, "opel" => $opel];
 foreach ($cars as $brand => $car) {
     echo "CAR " . $brand . "<br/>";
     foreach($car as $subkey => $value){
-        echo " " . $va
-        lue;
+        echo " " . $value;
     } 
     echo "<br/>";
 }
@@ -60,17 +59,17 @@ foreach ($cars as $brand => $car) {
 //Задание #6
 
 echo "<table>";
-for ($i=1; $i<=10; $i++){
+for ($col=1; $col<=10; $col++){
     echo "<tr>";
-    for ($j=1; $j<=10; $j++){
-        $s = $i * $j;
-        if ($i % 2 == 0 && $j % 2 == 0){
-            echo "<td>(" . $i . '*' . $j . '=' . $s . ")</td>";
+    for ($row=1; $row<=10; $row++){
+        $s = $col * $row;
+        if ($ol % 2 == 0 && $row % 2 == 0){
+            echo "<td>(" . $col . '*' . $row . '=' . $s . ")</td>";
         }
-        elseif ($i % 2 == 1 && $j % 2 == 1){
-            echo "<td>[" . $i . '*' . $j . '=' . $s . "]</td>";
+        elseif ($col % 2 == 1 && $row % 2 == 1){
+            echo "<td>[" . $col . '*' . $row . '=' . $s . "]</td>";
         }
-        else echo "<td>" . $i . '*' . $j . '=' . $s . "</td>";
+        else echo "<td>" . $col . '*' . $row . '=' . $s . "</td>";
     }
     echo "</tr>";
 }
