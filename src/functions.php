@@ -35,6 +35,9 @@ function task2(string $op, int|float ...$args){
             $res /= $args[$i];
         }
     }
+    else {
+            echo 'Неизвестный оператор!'; return 0;
+        }
     return $res;   
 }
 
