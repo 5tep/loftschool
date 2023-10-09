@@ -41,11 +41,11 @@ function task2(string $op, int|float ...$args){
 function task3(int $x, int $y){
 
     echo "<table>";
-    for ($i=1; $i<=$x; $i++){
+    for ($col=1; $col<=$x; $col++){
         echo "<tr>";
-        for ($j=1; $j<=$y; $j++){
-            $s = $i * $j;
-            echo "<td>" . $i . '*' . $j . '=' . $s . "</td>";
+        for ($row=1; $row<=$y; $row++){
+            $s = $col * $row;
+            echo "<td>" . $col . '*' . $row . '=' . $s . "</td>";
     }
     echo "</tr>";
 }
@@ -70,8 +70,8 @@ function task5_2($str = "Две бутылки лимонада"){
 
 }
 
-function task6($name, $text){
-    $fp = fopen("file.txt", "w");
+function task6($fname){
+    file_get_contents($fname);
 }
 
 ?>  
