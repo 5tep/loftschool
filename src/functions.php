@@ -38,20 +38,20 @@ function task2(string $op, int|float ...$args){
     return $res;   
 }
 
-function task3(int $x, int $y){
-
+function task3($x, $y){
+  if (is_int($x) && is_int($y)){    
     echo "<table>";
     for ($col=1; $col<=$x; $col++){
         echo "<tr>";
         for ($row=1; $row<=$y; $row++){
             $s = $col * $row;
             echo "<td>" . $col . '*' . $row . '=' . $s . "</td>";
-    }
+        }
     echo "</tr>";
-}
+    }
 echo "</table>";
-
 }
+} else echo "Неправильный тип";
 
 function task4_1(){
     return date('d.m.Y H:m');  
