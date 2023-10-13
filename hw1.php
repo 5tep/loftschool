@@ -19,7 +19,7 @@ echo "Решение: " . PIC_ALL . "-" . PIC_FL . "-" . PIC_PEN . "=" . $pic_pa
 
 //Задание #3
 
-$age = 30;
+$age = round(1, 99);
 if ($age >= 18 && $age <= 65){
     echo "Вам еще работать и работать";
 }
@@ -30,15 +30,20 @@ elseif ($age >= 1 && $age <= 17) {
     echo "Вам ещё рано работать";
 }
 else {
- echo "Неизвестный возраст";
+    echo "Неизвестный возраст";
 }
 
 //Задание #4
 
-$day = '6';
+$day = round(1,7);
 switch ($day){
-    case 1 : case 2 : case 3 : case 4 : case 5 : echo "Это рабочий день"; break;
-    case 6 : case 7 : echo "Это выходной день"; break;
+    case 1 : 
+    case 2 : 
+    case 3 : 
+    case 4 : 
+    case 5 : echo "Это рабочий день"; break;
+    case 6 : 
+    case 7 : echo "Это выходной день"; break;
     default : echo "Неизвестный день";
 }
 
@@ -63,7 +68,7 @@ for ($col=1; $col<=10; $col++){
     echo "<tr>";
     for ($row=1; $row<=10; $row++){
         $s = $col * $row;
-        if ($ol % 2 == 0 && $row % 2 == 0){
+        if ($col % 2 == 0 && $row % 2 == 0){
             echo "<td>(" . $col . '*' . $row . '=' . $s . ")</td>";
         }
         elseif ($col % 2 == 1 && $row % 2 == 1){
