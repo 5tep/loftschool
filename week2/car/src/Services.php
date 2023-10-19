@@ -2,8 +2,8 @@
 // Интерфейс для дополнительных услуг
 interface Service 
 {
-    public function applyService($minutes);
-    public function getPrice() ;
+    public function apply(Tariff $tariff);
+    public function getPrice();
 }
 
 // Реализация GPS-услуги
@@ -16,9 +16,9 @@ class GPSService implements Service
         return $this->$pricePerHour;
   }
 
-    public function applyService($minutes) 
+    public function apply($tariff) 
   {
-        $hours = ceil($minutes / 60);
+        $hours = ceil($tariff->totalmin / 60);
         return $hours * $this->pricePerHour;
   }
 }
@@ -32,7 +32,7 @@ class AdditionalDriverService implements Service
         return $this->price;
   }
 
-    public function applyService($minutes) 
+    public function apply($tariff) 
   {
         return $this->price;
   }
