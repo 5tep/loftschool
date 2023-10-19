@@ -22,7 +22,7 @@ abstract class AbstractTariff implements Tariff
         $this->totalPrice = $km * $this->pricePerKm + $minutes * $this->pricePerMinute;
         
         foreach ($this->services as $service) {
-            $this->totalPrice += $service->applyService($minutes);
+            $this->totalPrice += $service->apply($this);
         }
 
         return $this->totalPrice;
@@ -69,7 +69,7 @@ class HourlyTariff extends AbstractTariff
         $this->totalPrice = $hours * 200.0;
         
         foreach ($this->services as $service) {
-            $this->totalPrice += $service->applyService($minutes);
+            $this->totalPrice += $service->apply($this);
         }
 
         return $this->totalPrice;
