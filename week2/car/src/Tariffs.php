@@ -16,11 +16,12 @@ abstract class AbstractTariff implements Tariff
     protected $pricePerMinute = 0;
     protected $services = [];
     public $totalPrice;
+    protected $totalmin;
 
   public function calculatePrice($km, $minutes) 
     {
         $this->totalPrice = $km * $this->pricePerKm + $minutes * $this->pricePerMinute;
-        
+        $this->totalmin = $minutes;
         foreach ($this->services as $service) {
             $this->totalPrice += $service->apply($this);
         }
