@@ -10,8 +10,8 @@ $baseTariff = new BaseTariff();
 $hourlyTariff = new HourlyTariff();
 $studentTariff = new StudentTariff();
 
-$gpsService = new GPSService(15.0); // 15 рублей в час
-$additionalDriverService = new AdditionalDriverService(100.0);  // сто рубдей единоразово
+$gpsService = new GPSService(); 
+$additionalDriverService = new AdditionalDriverService();
 
 $price1 = $baseTariff->calculatePrice(20.0, 90);
 echo "Price for Base Tariff: $price1<br>";
