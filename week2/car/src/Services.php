@@ -13,7 +13,7 @@ class GPSService implements Service
 
         public function getPrice() 
   {
-        return $this->$pricePerHour;
+        return $this->pricePerHour;
   }
 
     public function apply($tariff) 
